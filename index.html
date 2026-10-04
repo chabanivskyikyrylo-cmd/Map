@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<title>Szlakownik</title>
+<meta name="description" content="Osobista mapa turystyczna offline: szlaki z OSM, własne trasy, profil wysokości, GPX.">
+<meta name="theme-color" content="#2f6b3a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Szlakownik">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<!-- APP:START -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 2.5 8 12 13l9.5-5z"/><path d="m2.5 12.5 9.5 5 9.5-5"/><path d="m2.5 17 9.5 5 9.5-5"/></symbol>
+  <symbol id="i-gps" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="8"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></symbol>
+  <symbol id="i-routes" viewBox="0 0 24 24"><path d="M4 19V5a1 1 0 0 1 1-1h4l2 2h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-snap" viewBox="0 0 24 24"><path d="M4 18c3-6 5 2 8-4s5-8 8-2"/><circle cx="4" cy="18" r="1.6"/><circle cx="20" cy="12" r="1.6"/></symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 10v7M14 10v7"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v3h16v-3"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-open" viewBox="0 0 24 24"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></symbol>
+  <symbol id="i-offline" viewBox="0 0 24 24"><path d="M4 16a4 4 0 0 1 1-7.9A6 6 0 0 1 16.6 7 4.5 4.5 0 0 1 18 16"/><path d="M12 11v9m0 0-3-3m3 3 3-3"/></symbol>
+</svg>
+
+<div id="map" aria-label="Mapa"></div>
+
+<header class="topbar">
+  <div class="brand"><span class="blaze" aria-hidden="true"></span><span>Szlakownik</span><span id="netpill" class="pill" hidden data-i18n="net.offline">Offline</span></div>
+  <div class="btnrow">
+    <button class="ibtn" id="btnLayers" data-i18n-title="layers" title="Warstwy"><svg class="i"><use href="#i-layers"/></svg></button>
+    <button class="ibtn" id="btnOffline" data-i18n-title="offline" title="Mapa offline"><svg class="i"><use href="#i-offline"/></svg></button>
+    <button class="ibtn" id="btnLocate" data-i18n-title="gps" title="GPS"><svg class="i"><use href="#i-gps"/></svg></button>
+    <button class="ibtn" id="btnRoutes" data-i18n-title="routes" title="Trasy"><svg class="i"><use href="#i-routes"/></svg></button>
+    <button class="ibtn" id="btnSettings" data-i18n-title="settings" title="Ustawienia"><svg class="i"><use href="#i-gear"/></svg></button>
+  </div>
+</header>
+<div class="zoomctl">
+  <button class="ibtn" id="zoomIn" aria-label="+"><svg class="i"><use href="#i-plus"/></svg></button>
+  <button class="ibtn" id="zoomOut" aria-label="−"><svg class="i"><use href="#i-minus"/></svg></button>
+</div>
+
+<section class="sheet" id="sheet" aria-label="Trasa">
+  <button class="sheet-handle" id="sheetToggle" aria-label="Zwiń / rozwiń"></button>
+  <div class="stats">
+    <div class="stat"><div class="lbl" data-i18n="stat.dist">Dystans</div><div class="val" id="sDist">0<small data-i18n="unit.km">km</small></div></div>
+    <div class="stat up"><div class="lbl" data-i18n="stat.up">Podejście</div><div class="val" id="sUp">—</div></div>
+    <div class="stat down"><div class="lbl" data-i18n="stat.down">Zejście</div><div class="val" id="sDown">—</div></div>
+    <div class="stat"><div class="lbl" data-i18n="stat.time">Czas</div><div class="val" id="sTime">—</div></div>
+  </div>
+  <div class="profile-wrap">
+    <canvas id="profile"></canvas>
+    <div class="profile-note" id="profileNote"><span id="profileNoteText" data-i18n="profile.empty">Profil wysokości pojawi się po drugim punkcie</span><button class="btn" id="btnEle" hidden data-i18n="profile.retry">Pobierz wysokości</button></div>
+  </div>
+  <div class="tools">
+    <button class="tool primary" id="btnDraw"><svg class="i"><use href="#i-pen"/></svg><span data-i18n="draw">Rysuj</span></button>
+    <button class="tool toggle" id="btnSnap"><svg class="i"><use href="#i-snap"/></svg><span data-i18n="snap">Po szlakach</span></button>
+    <button class="tool icon-only" id="btnUndo" data-i18n-title="undo" title="Cofnij" disabled><svg class="i"><use href="#i-undo"/></svg></button>
+    <button class="tool icon-only" id="btnClear" data-i18n-title="clear" title="Wyczyść" disabled><svg class="i"><use href="#i-trash"/></svg></button>
+    <button class="tool" id="btnSave" disabled><svg class="i"><use href="#i-save"/></svg><span data-i18n="save">Zapisz</span></button>
+    <button class="tool" id="btnExport" disabled><svg class="i"><use href="#i-download"/></svg><span>GPX</span></button>
+  </div>
+</section>
+
+<div class="backdrop" id="backdrop" hidden></div>
+
+<section class="panel" id="panelLayers" hidden>
+  <div class="panel-head"><h2 data-i18n="layers">Warstwy</h2><button class="ibtn panel-close" data-i18n-title="close" title="Zamknij"><svg class="i"><use href="#i-close"/></svg></button></div>
+  <div class="panel-body">
+    <div class="group"><div class="group-title" data-i18n="layers.base">Mapa</div>
+      <label class="opt"><input type="radio" name="base" value="opentopo" id="baseOpentopo"><span data-i18n="layer.opentopo">OpenTopoMap (rzeźba)</span></label>
+      <label class="opt"><input type="radio" name="base" value="osm" id="baseOsm"><span data-i18n="layer.osm">OpenStreetMap</span></label>
+    </div>
+    <div class="group"><div class="group-title" data-i18n="layers.overlays">Nakładki</div>
+      <label class="opt"><input type="checkbox" id="ovHiking"><span class="sw" style="background:#c4321f"></span><span data-i18n="layer.hiking">Szlaki piesze (OSM)</span></label>
+      <label class="opt"><input type="checkbox" id="ovCycling"><span class="sw" style="background:#2a6fa8"></span><span data-i18n="layer.cycling">Szlaki rowerowe</span></label>
+      <label class="opt"><input type="checkbox" id="ovKm"><span class="sw" style="background:#1d2a21"></span><span data-i18n="layer.km">Znaczniki kilometrów</span></label>
+    </div>
+    <p class="note" data-i18n="layers.note">Szlaki pochodzą z OpenStreetMap (waymarkedtrails.org): kolory jak na znakach PTTK.</p>
+  </div>
+</section>
+
+<section class="panel" id="panelOffline" hidden>
+  <div class="panel-head"><h2 data-i18n="offline">Mapa offline</h2><button class="ibtn panel-close" data-i18n-title="close" title="Zamknij"><svg class="i"><use href="#i-close"/></svg></button></div>
+  <div class="panel-body">
+    <p class="note warn" id="offlineUnavailable" hidden data-i18n="offline.unavailable">Tryb offline działa tylko w zainstalowanej wersji (HTTPS).</p>
+    <div class="group"><div class="group-title" data-i18n="offline.area">Obszar</div>
+      <div class="seg" id="areaSeg"><button data-area="view" class="on" data-i18n="offline.view">Bieżący widok</button><button data-area="route" data-i18n="offline.route">Wzdłuż trasy (±1 km)</button></div>
+    </div>
+    <div class="row"><label for="zoomMax" data-i18n="offline.zoom">Szczegółowość do zoom</label><select id="zoomMax"><option>12</option><option>13</option><option>14</option><option selected>15</option><option>16</option><option>17</option></select></div>
+    <div class="estimate" id="estimate">—</div>
+    <div class="progress" id="dlProgress" hidden><div></div></div>
+    <div class="note warn" id="dlWarn"></div>
+    <div class="note" id="dlStatus"></div>
+    <div class="btnrow wrap">
+      <button class="btn primary" id="btnDownload"><svg class="i"><use href="#i-download"/></svg><span data-i18n="offline.download">Pobierz</span></button>
+      <button class="btn" id="btnDlCancel" hidden data-i18n="offline.cancel">Stop</button>
+    </div>
+    <div class="group"><div class="group-title" data-i18n="offline.cacheTitle">Pamięć podręczna</div>
+      <div class="note" id="cacheStats">—</div>
+      <div class="btnrow wrap"><button class="btn danger" id="btnClearCache"><svg class="i"><use href="#i-trash"/></svg><span data-i18n="offline.clear">Wyczyść pamięć</span></button></div>
+    </div>
+    <p class="note" data-i18n="offline.note">Kafelki przeglądane online zapisują się same. Pobieranie dużych obszarów obciąża serwery OpenTopoMap — pobieraj tylko to, co potrzebne.</p>
+  </div>
+</section>
+
+<section class="panel" id="panelRoutes" hidden>
+  <div class="panel-head"><h2 data-i18n="routes">Trasy</h2><button class="ibtn panel-close" data-i18n-title="close" title="Zamknij"><svg class="i"><use href="#i-close"/></svg></button></div>
+  <div class="panel-body">
+    <div class="btnrow wrap">
+      <button class="btn" id="btnNewRoute"><svg class="i"><use href="#i-plus"/></svg><span data-i18n="routes.new">Nowa trasa</span></button>
+      <button class="btn" id="btnImport"><svg class="i"><use href="#i-open"/></svg><span data-i18n="routes.import">Importuj GPX</span></button>
+      <input type="file" id="fileGpx" accept=".gpx,application/gpx+xml" hidden>
+    </div>
+    <div class="route-list" id="routeList"></div>
+    <p class="note" id="routesEmpty" data-i18n="routes.empty">Brak zapisanych tras</p>
+  </div>
+</section>
+
+<section class="panel" id="panelSettings" hidden>
+  <div class="panel-head"><h2 data-i18n="settings">Ustawienia</h2><button class="ibtn panel-close" data-i18n-title="close" title="Zamknij"><svg class="i"><use href="#i-close"/></svg></button></div>
+  <div class="panel-body">
+    <div class="row"><label for="selLang" data-i18n="settings.lang">Język</label><select id="selLang"><option value="pl">Polski</option><option value="ru">Русский</option><option value="uk">Українська</option><option value="en">English</option></select></div>
+    <div class="group"><div class="group-title" data-i18n="settings.time">Obliczanie czasu (DIN 33466)</div>
+      <div class="row"><label for="setFlat" data-i18n="settings.flat">Prędkość na płaskim, km/h</label><input type="number" id="setFlat" min="1" max="10" step="0.5"></div>
+      <div class="row"><label for="setUp" data-i18n="settings.up">Podejście, m/h</label><input type="number" id="setUp" min="100" max="1000" step="50"></div>
+      <div class="row"><label for="setDown" data-i18n="settings.down">Zejście, m/h</label><input type="number" id="setDown" min="100" max="1500" step="50"></div>
+      <p class="note" data-i18n="settings.timeNote">Czas = dłuższy z (poziomy, pionowy) + połowa krótszego. Bez przerw.</p>
+    </div>
+    <div class="row"><label for="selProfile" data-i18n="settings.profile">Profil wyznaczania trasy</label><select id="selProfile"><option value="hiking-mountain">hiking-mountain</option><option value="hiking-beta">hiking-beta</option><option value="trekking">trekking (rower)</option><option value="shortest">shortest</option></select></div>
+    <div class="row"><label class="opt" for="setCacheViewed"><input type="checkbox" id="setCacheViewed"><span data-i18n="settings.cacheViewed">Zapisuj przeglądane kafelki</span></label></div>
+    <div class="btnrow wrap"><button class="btn" id="btnRebuild"><svg class="i"><use href="#i-snap"/></svg><span data-i18n="rebuild">Przelicz po szlakach</span></button></div>
+    <p class="note" data-i18n="settings.about">Mapa: OpenTopoMap, OpenStreetMap. Szlaki: waymarkedtrails.org. Trasowanie: brouter.de. Wysokości: open-meteo.com.</p>
+  </div>
+</section>
+
+<div class="modal" id="modalSave" hidden>
+  <div class="modal-card">
+    <h3 data-i18n="save.title">Zapisz trasę</h3>
+    <input type="text" id="saveName" maxlength="80" autocomplete="off">
+    <div class="modal-acts"><button class="btn" id="saveCancel" data-i18n="cancel">Anuluj</button><button class="btn primary" id="saveOk" data-i18n="save">Zapisz</button></div>
+  </div>
+</div>
+
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<!-- APP:END -->
+<script src="vendor/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
