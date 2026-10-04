@@ -10,8 +10,7 @@ const I18N = {
     'net.offline': 'Offline', draw: 'Rysuj', drawing: 'Rysowanie — stuknij w mapę', snap: 'Po szlakach', undo: 'Cofnij', clear: 'Wyczyść', save: 'Zapisz',
     'stat.dist': 'Dystans', 'stat.up': 'Podejście', 'stat.down': 'Zejście', 'stat.time': 'Czas',
     'profile.empty': 'Profil wysokości pojawi się po drugim punkcie', 'profile.loading': 'Pobieram wysokości…', 'profile.noele': 'Brak danych o wysokości (potrzebna sieć)', 'profile.retry': 'Pobierz wysokości',
-    layers: 'Warstwy', 'layers.base': 'Mapa', 'layers.overlays': 'Nakładki', 'layer.opentopo': 'OpenTopoMap (rzeźba)', 'layer.osm': 'OpenStreetMap', 'layer.hiking': 'Szlaki piesze (OSM)', 'layer.cycling': 'Szlaki rowerowe', 'layer.km': 'Znaczniki kilometrów',
-    'layers.note': 'Szlaki pochodzą z OpenStreetMap (waymarkedtrails.org): kolory jak na znakach PTTK.',
+    layers: 'Warstwy', 'layers.base': 'Mapa', 'layers.overlays': 'Nakładki', 'layer.osm': 'standardowa', 'layer.km': 'Znaczniki kilometrów',
     routes: 'Trasy', 'routes.empty': 'Brak zapisanych tras', 'routes.import': 'Importuj GPX', 'routes.load': 'Otwórz', 'routes.delete': 'Usuń', 'routes.new': 'Nowa trasa', 'routes.export': 'GPX',
     'save.title': 'Zapisz trasę', cancel: 'Anuluj', saved: 'Zapisano', deleted: 'Usunięto', close: 'Zamknij',
     settings: 'Ustawienia', 'settings.lang': 'Język', 'settings.time': 'Obliczanie czasu (DIN 33466)', 'settings.flat': 'Prędkość na płaskim, km/h', 'settings.up': 'Podejście, m/h', 'settings.down': 'Zejście, m/h',
@@ -25,13 +24,13 @@ const I18N = {
     'snap.failed': 'Nie udało się wyznaczyć po szlakach — linia prosta', 'pt.removed': 'Punkt usunięty', 'route.cleared': 'Trasa wyczyszczona',
     'gpx.imported': 'Zaimportowano: {name}', 'gpx.badfile': 'Nie udało się odczytać GPX',
     'sw.updated': 'Dostępna nowa wersja — odśwież stronę', 'unit.km': 'km', 'unit.m': 'm', 'unit.h': 'h', 'unit.min': 'min', 'route.untitled': 'Trasa', 'ele.failed': 'Nie udało się pobrać wysokości',
+    'layers.trails': 'Szlaki', 'layer.trailsVec': 'Szlaki PTTK z OSM (wszystkie, offline)', 'layer.bikeVec': 'Trasy rowerowe z OSM (wszystkie, offline)', 'layer.hillshade': 'Cieniowanie rzeźby', 'layer.hiking': 'Szlaki piesze (waymarkedtrails)', 'layer.cycling': 'Szlaki rowerowe (waymarkedtrails)', 'layers.keysNote': 'Mapy.cz i Thunderforest pojawią się tutaj po wpisaniu klucza API w ustawieniach.', 'layers.note': 'Szlaki z OSM rysowane są przerywaną linią w kolorze znaku; stuknij w szlak, aby zobaczyć nazwę. Widoczne od zoom 10, pobierają się dla oglądanego obszaru i zostają w pamięci.', 'layer.voyager': 'czytelna', 'layer.opentopo': 'rzeźba, poziomice', 'layer.esritopo': 'topograficzna', 'layer.esrisat': 'satelita', 'layer.mapy': 'turystyczna PL/CZ/SK', 'layer.tfoutdoors': 'outdoor', 'layer.tflandscape': 'krajobraz', 'trails.cells': '{n} obszarów szlaków w pamięci', 'trails.failed': 'Nie udało się pobrać szlaków (Overpass)', 'trails.unnamed': 'Szlak bez nazwy', 'net.iwn': 'międzynarodowy', 'net.nwn': 'krajowy', 'net.rwn': 'regionalny', 'net.lwn': 'lokalny', 'net.icn': 'międzynarodowy', 'net.ncn': 'krajowy', 'net.rcn': 'regionalny', 'net.lcn': 'lokalny', 'offline.cells': '{n} obszarów szlaków', 'offline.cellsProgress': 'Szlaki: obszar {key}…', 'settings.keys': 'Klucze API (opcjonalnie)', 'settings.keyMapy': 'Turystyczna mapa PL/CZ/SK — klucz na developer.mapy.cz', 'settings.keyTf': 'Outdoors, Landscape — klucz na thunderforest.com',
   },
   ru: {
     'net.offline': 'Офлайн', draw: 'Рисовать', drawing: 'Рисую — тапни по карте', snap: 'По тропам', undo: 'Отменить', clear: 'Очистить', save: 'Сохранить',
     'stat.dist': 'Длина', 'stat.up': 'Набор', 'stat.down': 'Спуск', 'stat.time': 'Время',
     'profile.empty': 'Профиль высот появится после второй точки', 'profile.loading': 'Загружаю высоты…', 'profile.noele': 'Нет данных о высотах (нужна сеть)', 'profile.retry': 'Загрузить высоты',
-    layers: 'Слои', 'layers.base': 'Карта', 'layers.overlays': 'Наложения', 'layer.opentopo': 'OpenTopoMap (рельеф)', 'layer.osm': 'OpenStreetMap', 'layer.hiking': 'Пешие szlaki (OSM)', 'layer.cycling': 'Велосипедные szlaki', 'layer.km': 'Километровые отметки',
-    'layers.note': 'Szlaki берутся из OpenStreetMap (waymarkedtrails.org): цвета как на знаках PTTK.',
+    layers: 'Слои', 'layers.base': 'Карта', 'layers.overlays': 'Наложения', 'layer.osm': 'стандартная', 'layer.km': 'Километровые отметки',
     routes: 'Маршруты', 'routes.empty': 'Сохранённых маршрутов пока нет', 'routes.import': 'Импорт GPX', 'routes.load': 'Открыть', 'routes.delete': 'Удалить', 'routes.new': 'Новый маршрут', 'routes.export': 'GPX',
     'save.title': 'Сохранить маршрут', cancel: 'Отмена', saved: 'Сохранено', deleted: 'Удалено', close: 'Закрыть',
     settings: 'Настройки', 'settings.lang': 'Язык', 'settings.time': 'Расчёт времени (DIN 33466)', 'settings.flat': 'Скорость по ровному, км/ч', 'settings.up': 'Подъём, м/ч', 'settings.down': 'Спуск, м/ч',
@@ -45,13 +44,13 @@ const I18N = {
     'snap.failed': 'Не удалось проложить по тропам — прямая линия', 'pt.removed': 'Точка удалена', 'route.cleared': 'Маршрут очищен',
     'gpx.imported': 'Импортировано: {name}', 'gpx.badfile': 'Не удалось прочитать GPX',
     'sw.updated': 'Доступна новая версия — перезагрузи страницу', 'unit.km': 'км', 'unit.m': 'м', 'unit.h': 'ч', 'unit.min': 'мин', 'route.untitled': 'Маршрут', 'ele.failed': 'Не удалось загрузить высоты',
+    'layers.trails': 'Szlaki', 'layer.trailsVec': 'Szlaki PTTK из OSM (все, офлайн)', 'layer.bikeVec': 'Веломаршруты из OSM (все, офлайн)', 'layer.hillshade': 'Тени рельефа', 'layer.hiking': 'Пешие szlaki (waymarkedtrails)', 'layer.cycling': 'Велосипедные (waymarkedtrails)', 'layers.keysNote': 'Mapy.cz и Thunderforest появятся здесь после ввода ключа API в настройках.', 'layers.note': 'Szlaki из OSM рисуются пунктиром цветом знака; тап по тропе показывает название. Видны с zoom 10, подгружаются для просматриваемой области и остаются в памяти.', 'layer.voyager': 'читаемая', 'layer.opentopo': 'рельеф, горизонтали', 'layer.esritopo': 'топографическая', 'layer.esrisat': 'спутник', 'layer.mapy': 'туристическая PL/CZ/SK', 'layer.tfoutdoors': 'outdoor', 'layer.tflandscape': 'ландшафт', 'trails.cells': '{n} областей szlaków в памяти', 'trails.failed': 'Не удалось загрузить szlaki (Overpass)', 'trails.unnamed': 'Szlak без названия', 'net.iwn': 'международный', 'net.nwn': 'национальный', 'net.rwn': 'региональный', 'net.lwn': 'локальный', 'net.icn': 'международный', 'net.ncn': 'национальный', 'net.rcn': 'региональный', 'net.lcn': 'локальный', 'offline.cells': '{n} областей szlaków', 'offline.cellsProgress': 'Szlaki: область {key}…', 'settings.keys': 'Ключи API (необязательно)', 'settings.keyMapy': 'Туристическая карта PL/CZ/SK — ключ на developer.mapy.cz', 'settings.keyTf': 'Outdoors, Landscape — ключ на thunderforest.com',
   },
   uk: {
     'net.offline': 'Офлайн', draw: 'Малювати', drawing: 'Малюю — тапни по мапі', snap: 'Стежками', undo: 'Скасувати', clear: 'Очистити', save: 'Зберегти',
     'stat.dist': 'Довжина', 'stat.up': 'Набір', 'stat.down': 'Спуск', 'stat.time': 'Час',
     'profile.empty': 'Профіль висот з’явиться після другої точки', 'profile.loading': 'Завантажую висоти…', 'profile.noele': 'Немає даних про висоти (потрібна мережа)', 'profile.retry': 'Завантажити висоти',
-    layers: 'Шари', 'layers.base': 'Мапа', 'layers.overlays': 'Накладки', 'layer.opentopo': 'OpenTopoMap (рельєф)', 'layer.osm': 'OpenStreetMap', 'layer.hiking': 'Пішохідні szlaki (OSM)', 'layer.cycling': 'Велосипедні szlaki', 'layer.km': 'Кілометрові позначки',
-    'layers.note': 'Szlaki беруться з OpenStreetMap (waymarkedtrails.org): кольори як на знаках PTTK.',
+    layers: 'Шари', 'layers.base': 'Мапа', 'layers.overlays': 'Накладки', 'layer.osm': 'стандартна', 'layer.km': 'Кілометрові позначки',
     routes: 'Маршрути', 'routes.empty': 'Збережених маршрутів поки немає', 'routes.import': 'Імпорт GPX', 'routes.load': 'Відкрити', 'routes.delete': 'Видалити', 'routes.new': 'Новий маршрут', 'routes.export': 'GPX',
     'save.title': 'Зберегти маршрут', cancel: 'Скасувати', saved: 'Збережено', deleted: 'Видалено', close: 'Закрити',
     settings: 'Налаштування', 'settings.lang': 'Мова', 'settings.time': 'Розрахунок часу (DIN 33466)', 'settings.flat': 'Швидкість по рівному, км/год', 'settings.up': 'Підйом, м/год', 'settings.down': 'Спуск, м/год',
@@ -65,13 +64,13 @@ const I18N = {
     'snap.failed': 'Не вдалося прокласти стежками — пряма лінія', 'pt.removed': 'Точку видалено', 'route.cleared': 'Маршрут очищено',
     'gpx.imported': 'Імпортовано: {name}', 'gpx.badfile': 'Не вдалося прочитати GPX',
     'sw.updated': 'Доступна нова версія — перезавантаж сторінку', 'unit.km': 'км', 'unit.m': 'м', 'unit.h': 'год', 'unit.min': 'хв', 'route.untitled': 'Маршрут', 'ele.failed': 'Не вдалося завантажити висоти',
+    'layers.trails': 'Szlaki', 'layer.trailsVec': 'Szlaki PTTK з OSM (усі, офлайн)', 'layer.bikeVec': 'Веломаршрути з OSM (усі, офлайн)', 'layer.hillshade': 'Тіні рельєфу', 'layer.hiking': 'Пішохідні szlaki (waymarkedtrails)', 'layer.cycling': 'Велосипедні (waymarkedtrails)', 'layers.keysNote': 'Mapy.cz і Thunderforest з’являться тут після введення ключа API в налаштуваннях.', 'layers.note': 'Szlaki з OSM малюються пунктиром кольором знака; тап по стежці показує назву. Видно з zoom 10, підвантажуються для області перегляду і залишаються в пам’яті.', 'layer.voyager': 'читабельна', 'layer.opentopo': 'рельєф, горизонталі', 'layer.esritopo': 'топографічна', 'layer.esrisat': 'супутник', 'layer.mapy': 'туристична PL/CZ/SK', 'layer.tfoutdoors': 'outdoor', 'layer.tflandscape': 'ландшафт', 'trails.cells': '{n} областей szlaków у пам’яті', 'trails.failed': 'Не вдалося завантажити szlaki (Overpass)', 'trails.unnamed': 'Szlak без назви', 'net.iwn': 'міжнародний', 'net.nwn': 'національний', 'net.rwn': 'регіональний', 'net.lwn': 'локальний', 'net.icn': 'міжнародний', 'net.ncn': 'національний', 'net.rcn': 'регіональний', 'net.lcn': 'локальний', 'offline.cells': '{n} областей szlaków', 'offline.cellsProgress': 'Szlaki: область {key}…', 'settings.keys': 'Ключі API (необов’язково)', 'settings.keyMapy': 'Туристична мапа PL/CZ/SK — ключ на developer.mapy.cz', 'settings.keyTf': 'Outdoors, Landscape — ключ на thunderforest.com',
   },
   en: {
     'net.offline': 'Offline', draw: 'Draw', drawing: 'Drawing — tap the map', snap: 'Snap to trails', undo: 'Undo', clear: 'Clear', save: 'Save',
     'stat.dist': 'Distance', 'stat.up': 'Ascent', 'stat.down': 'Descent', 'stat.time': 'Time',
     'profile.empty': 'Elevation profile appears after the second point', 'profile.loading': 'Loading elevation…', 'profile.noele': 'No elevation data (network needed)', 'profile.retry': 'Load elevation',
-    layers: 'Layers', 'layers.base': 'Base map', 'layers.overlays': 'Overlays', 'layer.opentopo': 'OpenTopoMap (relief)', 'layer.osm': 'OpenStreetMap', 'layer.hiking': 'Hiking trails (OSM)', 'layer.cycling': 'Cycling routes', 'layer.km': 'Km markers',
-    'layers.note': 'Trails come from OpenStreetMap (waymarkedtrails.org), coloured like the PTTK blazes.',
+    layers: 'Layers', 'layers.base': 'Base map', 'layers.overlays': 'Overlays', 'layer.osm': 'standard', 'layer.km': 'Km markers',
     routes: 'Routes', 'routes.empty': 'No saved routes yet', 'routes.import': 'Import GPX', 'routes.load': 'Open', 'routes.delete': 'Delete', 'routes.new': 'New route', 'routes.export': 'GPX',
     'save.title': 'Save route', cancel: 'Cancel', saved: 'Saved', deleted: 'Deleted', close: 'Close',
     settings: 'Settings', 'settings.lang': 'Language', 'settings.time': 'Time estimate (DIN 33466)', 'settings.flat': 'Flat speed, km/h', 'settings.up': 'Ascent, m/h', 'settings.down': 'Descent, m/h',
@@ -85,13 +84,15 @@ const I18N = {
     'snap.failed': 'Trail routing failed — straight line', 'pt.removed': 'Point removed', 'route.cleared': 'Route cleared',
     'gpx.imported': 'Imported: {name}', 'gpx.badfile': 'Could not read the GPX file',
     'sw.updated': 'New version available — reload the page', 'unit.km': 'km', 'unit.m': 'm', 'unit.h': 'h', 'unit.min': 'min', 'route.untitled': 'Route', 'ele.failed': 'Could not load elevation',
+    'layers.trails': 'Trails', 'layer.trailsVec': 'PTTK trails from OSM (all, offline)', 'layer.bikeVec': 'Cycling routes from OSM (all, offline)', 'layer.hillshade': 'Hillshade', 'layer.hiking': 'Hiking trails (waymarkedtrails)', 'layer.cycling': 'Cycling routes (waymarkedtrails)', 'layers.keysNote': 'Mapy.cz and Thunderforest appear here once an API key is entered in settings.', 'layers.note': 'OSM trails are drawn as dashed lines in the blaze colour; tap a trail for its name. Visible from zoom 10, fetched for the area you look at and kept for offline use.', 'layer.voyager': 'readable', 'layer.opentopo': 'relief, contours', 'layer.esritopo': 'topographic', 'layer.esrisat': 'satellite', 'layer.mapy': 'hiking map PL/CZ/SK', 'layer.tfoutdoors': 'outdoor', 'layer.tflandscape': 'landscape', 'trails.cells': '{n} trail areas stored', 'trails.failed': 'Could not load trails (Overpass)', 'trails.unnamed': 'Unnamed trail', 'net.iwn': 'international', 'net.nwn': 'national', 'net.rwn': 'regional', 'net.lwn': 'local', 'net.icn': 'international', 'net.ncn': 'national', 'net.rcn': 'regional', 'net.lcn': 'local', 'offline.cells': '{n} trail areas', 'offline.cellsProgress': 'Trails: area {key}…', 'settings.keys': 'API keys (optional)', 'settings.keyMapy': 'Hiking map PL/CZ/SK — key from developer.mapy.cz', 'settings.keyTf': 'Outdoors, Landscape — key from thunderforest.com',
   },
 };
 
 /* ------------------------------------------------------------ settings */
-const DEFAULTS = { lang: null, base: 'opentopo', hiking: true, cycling: false, km: true, snap: true, flat: 4, up: 300, down: 500, profile: 'hiking-mountain', cacheViewed: true, sheet: 'open', view: null };
+const DEFAULTS = { lang: null, base: 'voyager', hiking: false, cycling: false, hillshade: true, trailsVec: true, bikeVec: false, km: true, snap: true, flat: 4, up: 300, down: 500, profile: 'hiking-mountain', cacheViewed: true, sheet: 'open', view: null, keyMapy: '', keyTf: '', v: 2 };
 const settings = Object.assign({}, DEFAULTS);
 try { Object.assign(settings, JSON.parse(localStorage.getItem('szlakownik.settings') || '{}')); } catch (e) { /* no storage */ }
+if (settings.v < 2) { Object.assign(settings, { base: 'voyager', hiking: false, hillshade: true, trailsVec: true, v: 2 }); } // first update: switch to the readable base + vector trails
 function saveSettings() { try { localStorage.setItem('szlakownik.settings', JSON.stringify(settings)); } catch (e) { /* ignore */ } }
 
 function detectLang() {
@@ -113,6 +114,7 @@ function applyI18n() {
   document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
   document.querySelectorAll('[data-i18n-title]').forEach((el) => { el.title = t(el.dataset.i18nTitle); });
   $('selLang').value = LANG;
+  renderBaseList();
   renderStats();
   renderRouteList();
   drawProfile();
@@ -201,40 +203,176 @@ const CachedTileLayer = L.TileLayer.extend({
 
 /* ------------------------------------------------------------------- map */
 const SOURCES = {
-  opentopo: { url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', subdomains: ['a', 'b', 'c'], maxNative: 17, kb: 28, attr: '© <a href="https://openstreetmap.org/copyright">OSM</a>, SRTM | <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)' },
-  osm: { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', subdomains: [], maxNative: 19, kb: 22, attr: '© <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>' },
+  // base maps
+  voyager: { base: true, name: 'CARTO Voyager', url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', subdomains: ['a', 'b', 'c', 'd'], maxNative: 19, kb: 14, attr: '© <a href="https://openstreetmap.org/copyright">OSM</a> © <a href="https://carto.com/attributions">CARTO</a>' },
+  opentopo: { base: true, name: 'OpenTopoMap', url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', subdomains: ['a', 'b', 'c'], maxNative: 17, kb: 28, attr: '© <a href="https://openstreetmap.org/copyright">OSM</a>, SRTM | <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)' },
+  esritopo: { base: true, name: 'Esri World Topo', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', subdomains: [], maxNative: 19, kb: 30, attr: 'Esri, HERE, Garmin, FAO, USGS, © OSM' },
+  osm: { base: true, name: 'OpenStreetMap', url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', subdomains: [], maxNative: 19, kb: 22, attr: '© <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>' },
+  esrisat: { base: true, name: 'Esri Satellite', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', subdomains: [], maxNative: 18, kb: 40, attr: 'Esri, Maxar, Earthstar Geographics' },
+  mapy: { base: true, key: 'mapy', name: 'Mapy.cz Turistická', url: 'https://api.mapy.cz/v1/maptiles/outdoor/256/{z}/{x}/{y}?apikey={key}', subdomains: [], maxNative: 19, kb: 30, attr: '© <a href="https://mapy.cz">Seznam.cz</a>, © OSM' },
+  tfoutdoors: { base: true, key: 'tf', name: 'Thunderforest Outdoors', url: 'https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey={key}', subdomains: ['a', 'b', 'c'], maxNative: 20, kb: 30, attr: '© <a href="https://thunderforest.com">Thunderforest</a>, © OSM' },
+  tflandscape: { base: true, key: 'tf', name: 'Thunderforest Landscape', url: 'https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey={key}', subdomains: ['a', 'b', 'c'], maxNative: 20, kb: 30, attr: '© <a href="https://thunderforest.com">Thunderforest</a>, © OSM' },
+  // overlays
   hiking: { url: 'https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', subdomains: [], maxNative: 18, kb: 6, attr: '<a href="https://hiking.waymarkedtrails.org">waymarkedtrails</a>' },
   cycling: { url: 'https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png', subdomains: [], maxNative: 18, kb: 6, attr: '<a href="https://cycling.waymarkedtrails.org">waymarkedtrails</a>' },
+  hillshade: { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}', subdomains: [], maxNative: 16, kb: 12, attr: 'Hillshade: Esri' },
 };
+const apiKey = (k) => (k === 'mapy' ? settings.keyMapy : k === 'tf' ? settings.keyTf : '') || '';
 function makeLayer(key, extra) {
   const s = SOURCES[key];
-  return new CachedTileLayer(s.url, Object.assign({ subdomains: s.subdomains, maxNativeZoom: s.maxNative, maxZoom: 19, attribution: s.attr, crossOrigin: 'anonymous', updateWhenIdle: true, keepBuffer: 3 }, extra || {}));
+  const url = s.url.replace('{key}', encodeURIComponent(apiKey(s.key)));
+  return new CachedTileLayer(url, Object.assign({ subdomains: s.subdomains, maxNativeZoom: s.maxNative, maxZoom: 19, attribution: s.attr, crossOrigin: 'anonymous', updateWhenIdle: true, keepBuffer: 3 }, extra || {}));
 }
 const map = L.map('map', { zoomControl: false, attributionControl: true, worldCopyJump: false, tap: false });
 map.attributionControl.setPrefix('');
-const layers = { opentopo: makeLayer('opentopo'), osm: makeLayer('osm'), hiking: makeLayer('hiking', { opacity: 0.95, zIndex: 5 }), cycling: makeLayer('cycling', { opacity: 0.9, zIndex: 4 }) };
-let baseLayer = null;
+map.createPane('hillshade').style.zIndex = 250; map.getPane('hillshade').style.mixBlendMode = 'multiply';
+map.createPane('trails').style.zIndex = 390;
+const layers = { hiking: makeLayer('hiking', { opacity: 0.95, zIndex: 5 }), cycling: makeLayer('cycling', { opacity: 0.9, zIndex: 4 }), hillshade: makeLayer('hillshade', { pane: 'hillshade', opacity: 0.55 }) };
+let baseLayer = null, baseKey = null;
+function baseAvailable(key) { const s = SOURCES[key]; return !!(s && s.base && (!s.key || apiKey(s.key))); }
 function setBase(key) {
+  if (!baseAvailable(key)) key = 'voyager';
   if (baseLayer) map.removeLayer(baseLayer);
-  baseLayer = layers[key] || layers.opentopo; baseLayer.addTo(map);
+  baseLayer = makeLayer(key); baseLayer.addTo(map); baseKey = key;
   settings.base = key; saveSettings();
-  $('baseOpentopo').checked = key === 'opentopo'; $('baseOsm').checked = key === 'osm';
+  document.querySelectorAll('#baseList input').forEach((i) => { i.checked = i.value === key; });
+}
+function renderBaseList() {
+  const list = $('baseList'); list.innerHTML = '';
+  Object.keys(SOURCES).filter(baseAvailable).forEach((key) => {
+    const lab = document.createElement('label'); lab.className = 'opt';
+    const inp = document.createElement('input'); inp.type = 'radio'; inp.name = 'base'; inp.value = key; inp.checked = key === baseKey; inp.onchange = () => setBase(key);
+    const span = document.createElement('span'); span.textContent = SOURCES[key].name + (t('layer.' + key) !== 'layer.' + key ? ' — ' + t('layer.' + key) : '');
+    lab.append(inp, span); list.appendChild(lab);
+  });
 }
 function setOverlay(key, on) {
   if (on) layers[key].addTo(map); else map.removeLayer(layers[key]);
   settings[key] = on; saveSettings();
 }
 setBase(settings.base);
-setOverlay('hiking', settings.hiking); setOverlay('cycling', settings.cycling);
-$('ovHiking').checked = settings.hiking; $('ovCycling').checked = settings.cycling; $('ovKm').checked = settings.km;
+setOverlay('hiking', settings.hiking); setOverlay('cycling', settings.cycling); setOverlay('hillshade', settings.hillshade);
+$('ovHiking').checked = settings.hiking; $('ovCycling').checked = settings.cycling; $('ovHillshade').checked = settings.hillshade; $('ovKm').checked = settings.km;
 if (settings.view && settings.view.length === 3) map.setView([settings.view[0], settings.view[1]], settings.view[2]);
 else map.setView([49.25, 19.95], 12); // Tatry, as a sensible first view
 map.on('moveend', () => { const c = map.getCenter(); settings.view = [+c.lat.toFixed(5), +c.lng.toFixed(5), map.getZoom()]; saveSettings(); if (openPanel && openPanel.id === 'panelOffline') updateEstimate(); });
 $('zoomIn').onclick = () => map.zoomIn(); $('zoomOut').onclick = () => map.zoomOut();
-$('baseOpentopo').onchange = () => setBase('opentopo'); $('baseOsm').onchange = () => setBase('osm');
 $('ovHiking').onchange = (e) => setOverlay('hiking', e.target.checked);
 $('ovCycling').onchange = (e) => setOverlay('cycling', e.target.checked);
+$('ovHillshade').onchange = (e) => setOverlay('hillshade', e.target.checked);
 $('ovKm').onchange = (e) => { settings.km = e.target.checked; saveSettings(); renderKm(); };
+
+/* ------------------------------------------------------ vector trails (Overpass) */
+// OSM route relations drawn as dashed lines in the blaze colour; fetched per zoom-11 cell, kept in IndexedDB for offline use.
+const TRAIL_ZOOM = 10, CELL_Z = 11;
+const OSMC_COLORS = { red: '#d62b1f', blue: '#1f5fd1', green: '#1f8a3b', yellow: '#e0b000', black: '#222222', brown: '#7a4a1a', orange: '#f07f0a', purple: '#7a2fb0', violet: '#7a2fb0', white: '#f4f4f4', gray: '#8a8a8a', grey: '#8a8a8a', pink: '#e05aa0' };
+function trailColor(tags, fallback) {
+  let c = (tags.colour || tags.color || '').trim().toLowerCase();
+  if (!c && tags['osmc:symbol']) c = tags['osmc:symbol'].split(':')[0].trim().toLowerCase();
+  if (OSMC_COLORS[c]) return OSMC_COLORS[c];
+  if (/^#[0-9a-f]{6}$/.test(c)) return c;
+  return fallback;
+}
+const trailRenderer = L.canvas({ pane: 'trails', padding: 0.4, tolerance: 6 }); // generous tap target for thin dashed lines
+class VectorTrails {
+  constructor(type) {
+    this.type = type; // 'hiking' | 'bicycle'
+    this.regex = type === 'hiking' ? '^(hiking|foot)$' : '^(bicycle|mtb)$';
+    this.fallback = type === 'hiking' ? '#6b6b6b' : '#8a3fb0';
+    this.cells = new Map(); this.rendered = new Set(); this.queue = []; this.busy = false; this.failedAt = 0;
+    this.group = L.layerGroup(); this.enabled = false; this.onMap = false;
+  }
+  setEnabled(on) { this.enabled = on; this.sync(); }
+  sync() {
+    const show = this.enabled && map.getZoom() >= TRAIL_ZOOM;
+    if (show && !this.onMap) { this.group.addTo(map); this.onMap = true; }
+    if (!show && this.onMap) { map.removeLayer(this.group); this.onMap = false; }
+    if (show) this.ensureView();
+    this.status();
+  }
+  status() { if (this.type === 'hiking') { const n = this.cells.size; $('trailsVecStatus').textContent = n ? t('trails.cells', { n }) : ''; } }
+  cellsIn(bounds) {
+    const keys = [];
+    const x0 = lon2tile(bounds.getWest(), CELL_Z), x1 = lon2tile(bounds.getEast(), CELL_Z), y0 = lat2tile(bounds.getNorth(), CELL_Z), y1 = lat2tile(bounds.getSouth(), CELL_Z);
+    for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) keys.push(`${x}/${y}`);
+    return keys;
+  }
+  cellBounds(key) {
+    const [x, y] = key.split('/').map(Number), n = 2 ** CELL_Z;
+    const lon0 = x / n * 360 - 180, lon1 = (x + 1) / n * 360 - 180;
+    const lat = (yy) => Math.atan(Math.sinh(Math.PI * (1 - 2 * yy / n))) * 180 / Math.PI;
+    return [lat(y + 1), lon0, lat(y), lon1]; // S, W, N, E
+  }
+  async ensureView() {
+    const keys = this.cellsIn(map.getBounds().pad(0.1));
+    if (keys.length > 12) return; // too wide a view: wait for the user to zoom in
+    for (const key of keys) {
+      if (this.cells.has(key) || this.queue.includes(key)) continue;
+      const stored = await idbGet('trailcells', this.type + ':' + key);
+      if (stored) { this.cells.set(key, stored); this.render(stored); this.status(); }
+      else if (!this.queue.includes(key)) this.queue.push(key);
+    }
+    this.pump();
+  }
+  async pump() {
+    if (this.busy || !this.queue.length) return;
+    if (!navigator.onLine || Date.now() - this.failedAt < 20000) return;
+    this.busy = true;
+    const key = this.queue.shift();
+    try {
+      const cell = await this.fetchCell(key);
+      this.cells.set(key, cell); await idbPut('trailcells', Object.assign({ id: this.type + ':' + key }, cell));
+      this.render(cell); this.status();
+    } catch (e) { this.failedAt = Date.now(); if (!this.queue.includes(key)) this.queue.push(key); toast(t('trails.failed'), 2000); }
+    finally { this.busy = false; setTimeout(() => this.pump(), 250); }
+  }
+  async fetchCell(key, signal) {
+    const [S, W, N, E] = this.cellBounds(key).map((v) => v.toFixed(5));
+    const q = `[out:json][timeout:60];rel["route"~"${this.regex}"](${S},${W},${N},${E})->.r;.r out body;way(r.r)(${S},${W},${N},${E});out geom;`;
+    let resp = null;
+    for (const ep of ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter']) {
+      try { resp = await fetch(ep, { method: 'POST', body: 'data=' + encodeURIComponent(q), headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, signal }); if (resp.ok) break; resp = null; }
+      catch (e) { if (e.name === 'AbortError') throw e; resp = null; }
+    }
+    if (!resp) throw new Error('overpass');
+    const j = await resp.json();
+    const rels = new Map(), wayRels = new Map();
+    (j.elements || []).forEach((el) => { if (el.type === 'relation') { rels.set(el.id, el.tags || {}); (el.members || []).forEach((m) => { if (m.type === 'way') { if (!wayRels.has(m.ref)) wayRels.set(m.ref, []); wayRels.get(m.ref).push(el.id); } }); } });
+    const ways = [];
+    (j.elements || []).forEach((el) => {
+      if (el.type !== 'way' || !el.geometry || el.geometry.length < 2) return;
+      const rid = (wayRels.get(el.id) || [])[0]; const tags = rid != null ? rels.get(rid) || {} : {};
+      ways.push({ id: el.id, c: trailColor(tags, this.fallback), name: tags.name || tags.ref || '', ref: tags.ref || '', net: tags.network || '', op: tags.operator || '', dist: tags.distance || '', pts: el.geometry.map((g) => [+g.lat.toFixed(5), +g.lon.toFixed(5)]) });
+    });
+    return { fetched: Date.now(), ways };
+  }
+  render(cell) {
+    cell.ways.forEach((w) => {
+      if (this.rendered.has(w.id)) return;
+      this.rendered.add(w.id);
+      L.polyline(w.pts, { renderer: trailRenderer, color: '#ffffff', weight: 5, opacity: 0.75, interactive: false }).addTo(this.group);
+      const line = L.polyline(w.pts, { renderer: trailRenderer, color: w.c, weight: 3, opacity: 1, dashArray: '8 7', lineCap: 'butt', bubblingMouseEvents: false });
+      line.on('click', (e) => {
+        L.DomEvent.stopPropagation(e.originalEvent); // keep the map's own click (and its popup-closing preclick) out of it
+        if (drawing) { addWaypoint([e.latlng.lat, e.latlng.lng]); return; }
+        const el = document.createElement('div');
+        const b = document.createElement('b'); b.textContent = w.name || t('trails.unnamed'); el.appendChild(b);
+        const meta = [w.ref && w.ref !== w.name ? w.ref : '', w.net ? t('net.' + w.net) : '', w.dist ? w.dist + (/\d$/.test(w.dist) ? ' km' : '') : '', w.op].filter(Boolean).join(' · ');
+        if (meta) { const m = document.createElement('div'); m.className = 'note'; m.textContent = meta; el.appendChild(m); }
+        L.popup({ closeButton: false, maxWidth: 260 }).setLatLng(e.latlng).setContent(el).openOn(map);
+      });
+      line.addTo(this.group);
+    });
+  }
+  async clearStored() { this.cells.clear(); this.rendered.clear(); this.group.clearLayers(); this.queue = []; await idbClearPrefix('trailcells', this.type + ':'); this.status(); }
+}
+const trailsVec = new VectorTrails('hiking'), bikeVec = new VectorTrails('bicycle');
+$('ovTrailsVec').checked = settings.trailsVec; $('ovBikeVec').checked = settings.bikeVec;
+$('ovTrailsVec').onchange = (e) => { settings.trailsVec = e.target.checked; saveSettings(); trailsVec.setEnabled(settings.trailsVec); };
+$('ovBikeVec').onchange = (e) => { settings.bikeVec = e.target.checked; saveSettings(); bikeVec.setEnabled(settings.bikeVec); };
+let trailsTimer = null;
+map.on('moveend zoomend', () => { clearTimeout(trailsTimer); trailsTimer = setTimeout(() => { trailsVec.sync(); bikeVec.sync(); }, 350); });
+window.addEventListener('online', () => { trailsVec.pump(); bikeVec.pump(); });
 
 /* ------------------------------------------------------------------ route model */
 // route = { id, name, waypoints: [[lat,lon]], legs: [{ mode:'snap'|'line'|'fixed', coords:[[lat,lon,ele|null]], pending?:bool }] }
@@ -553,14 +691,21 @@ setSheet(settings.sheet !== 'closed');
 
 /* ------------------------------------------------------------------ storage */
 const DB_NAME = 'szlakownik', STORE = 'routes';
+let dbPromise = null;
 function idb() {
-  return new Promise((res, rej) => {
+  if (dbPromise) return dbPromise;
+  dbPromise = new Promise((res, rej) => {
     if (!window.indexedDB) return rej(new Error('no idb'));
-    const rq = indexedDB.open(DB_NAME, 1);
-    rq.onupgradeneeded = () => rq.result.createObjectStore(STORE, { keyPath: 'id' });
-    rq.onsuccess = () => res(rq.result); rq.onerror = () => rej(rq.error);
+    const rq = indexedDB.open(DB_NAME, 2);
+    rq.onupgradeneeded = () => { const db = rq.result; if (!db.objectStoreNames.contains(STORE)) db.createObjectStore(STORE, { keyPath: 'id' }); if (!db.objectStoreNames.contains('trailcells')) db.createObjectStore('trailcells', { keyPath: 'id' }); };
+    rq.onsuccess = () => res(rq.result); rq.onerror = () => { dbPromise = null; rej(rq.error); };
   });
+  return dbPromise;
 }
+async function idbGet(store, key) { try { const db = await idb(); return await new Promise((res, rej) => { const rq = db.transaction(store).objectStore(store).get(key); rq.onsuccess = () => res(rq.result || null); rq.onerror = () => rej(rq.error); }); } catch (e) { return null; } }
+async function idbPut(store, val) { try { const db = await idb(); await new Promise((res, rej) => { const tx = db.transaction(store, 'readwrite'); tx.objectStore(store).put(val); tx.oncomplete = res; tx.onerror = () => rej(tx.error); }); } catch (e) { /* no idb */ } }
+async function idbClearPrefix(store, prefix) { try { const db = await idb(); await new Promise((res, rej) => { const tx = db.transaction(store, 'readwrite'); const os = tx.objectStore(store); const rq = os.openCursor(); rq.onsuccess = () => { const c = rq.result; if (c) { if (String(c.key).startsWith(prefix)) c.delete(); c.continue(); } }; tx.oncomplete = res; tx.onerror = () => rej(tx.error); }); } catch (e) { /* ignore */ } }
+async function idbCount(store) { try { const db = await idb(); return await new Promise((res, rej) => { const rq = db.transaction(store).objectStore(store).count(); rq.onsuccess = () => res(rq.result); rq.onerror = () => rej(rq.error); }); } catch (e) { return 0; } }
 async function dbAll() {
   try { const db = await idb(); return await new Promise((res, rej) => { const rq = db.transaction(STORE).objectStore(STORE).getAll(); rq.onsuccess = () => res(rq.result || []); rq.onerror = () => rej(rq.error); }); }
   catch (e) { try { return JSON.parse(localStorage.getItem('szlakownik.routes') || '[]'); } catch (e2) { return []; } }
@@ -673,7 +818,15 @@ map.on('dragstart', () => { if (gpsFollow) { gpsFollow = false; $('btnLocate').c
 let dlArea = 'view', dlAbort = null;
 $('areaSeg').querySelectorAll('button').forEach((b) => { b.onclick = () => { dlArea = b.dataset.area; $('areaSeg').querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b)); updateEstimate(); }; });
 $('zoomMax').onchange = updateEstimate;
-function activeSources() { const s = [settings.base]; if (settings.hiking) s.push('hiking'); if (settings.cycling) s.push('cycling'); return s; }
+function activeSources() { const s = [baseKey]; if (settings.hiking) s.push('hiking'); if (settings.cycling) s.push('cycling'); if (settings.hillshade) s.push('hillshade'); return s; }
+function activeVector() { const v = []; if (settings.trailsVec) v.push(trailsVec); if (settings.bikeVec) v.push(bikeVec); return v; }
+function areaBounds() {
+  if (dlArea === 'view') return map.getBounds();
+  const pts = track(); if (pts.length < 2) return null;
+  const b = L.latLngBounds(pts.map((p) => [p[0], p[1]]));
+  const dLat = 1000 / 111320, dLon = 1000 / (111320 * Math.cos(b.getCenter().lat * Math.PI / 180));
+  return L.latLngBounds([b.getSouth() - dLat, b.getWest() - dLon], [b.getNorth() + dLat, b.getEast() + dLon]);
+}
 function tileSet() {
   const zMax = +$('zoomMax').value, zMin = Math.min(Math.max(8, Math.floor(map.getZoom())), zMax);
   const tiles = new Set();
@@ -700,7 +853,8 @@ function updateEstimate() {
   const tiles = tileSet(), srcs = activeSources();
   const n = tiles.size * srcs.length;
   const mb = tiles.size * srcs.reduce((a, k) => a + SOURCES[k].kb, 0) / 1024;
-  $('estimate').textContent = dlArea === 'route' && !tiles.size ? t('offline.noroute') : t('offline.estimate', { n, mb: mb < 10 ? mb.toFixed(1) : Math.round(mb) });
+  const ab = areaBounds(); const cells = ab ? activeVector().reduce((a, v) => a + v.cellsIn(ab).filter((k) => !v.cells.has(k)).length, 0) : 0;
+  $('estimate').textContent = dlArea === 'route' && !tiles.size ? t('offline.noroute') : t('offline.estimate', { n, mb: mb < 10 ? mb.toFixed(1) : Math.round(mb) }) + (cells ? ' + ' + t('offline.cells', { n: cells }) : '');
   const tooMany = n > 6000;
   const blocked = srcs.map((k) => hostOf(SOURCES[k].url.replace('{s}', 'a'))).filter((h) => corsBlocked.has(h));
   $('dlWarn').textContent = tooMany ? t('offline.toomany') : blocked.map((h) => t('offline.nocors', { host: h })).join(' · ');
@@ -717,10 +871,11 @@ async function refreshCacheStats() {
     const keys = await tileCache.keys();
     let mb = '?';
     if (navigator.storage && navigator.storage.estimate) { const est = await navigator.storage.estimate(); mb = ((est.usage || 0) / 1048576).toFixed(1); }
-    $('cacheStats').textContent = t('offline.cache', { n: keys.length, mb });
+    const cells = await idbCount('trailcells');
+    $('cacheStats').textContent = t('offline.cache', { n: keys.length, mb }) + (cells ? ' · ' + t('trails.cells', { n: cells }) : '');
   } catch (e) { $('cacheStats').textContent = '—'; }
 }
-$('btnClearCache').onclick = async () => { try { await caches.delete(TILE_CACHE); tileCache = null; await openTileCache(); } catch (e) { /* ignore */ } refreshCacheStats(); };
+$('btnClearCache').onclick = async () => { try { await caches.delete(TILE_CACHE); tileCache = null; await openTileCache(); } catch (e) { /* ignore */ } await trailsVec.clearStored(); await bikeVec.clearStored(); trailsVec.sync(); bikeVec.sync(); refreshCacheStats(); };
 $('btnDlCancel').onclick = () => { if (dlAbort) dlAbort.abort(); };
 $('btnDownload').onclick = async () => {
   if (!tileCache) return;
@@ -745,6 +900,21 @@ $('btnDownload').onclick = async () => {
   };
   await Promise.all([0, 1, 2, 3].map(worker));
   tick();
+  // vector trail cells for the area (sequential: Overpass allows few parallel queries)
+  const ab = areaBounds();
+  if (ab && !dlAbort.signal.aborted) {
+    for (const v of activeVector()) {
+      for (const key of v.cellsIn(ab)) {
+        if (dlAbort.signal.aborted) break;
+        if (v.cells.has(key)) continue;
+        const stored = await idbGet('trailcells', v.type + ':' + key);
+        if (stored) { v.cells.set(key, stored); v.render(stored); continue; }
+        $('dlStatus').textContent = t('offline.cellsProgress', { key });
+        try { const cell = await v.fetchCell(key, dlAbort.signal); v.cells.set(key, cell); await idbPut('trailcells', Object.assign({ id: v.type + ':' + key }, cell)); v.render(cell); v.status(); }
+        catch (e) { if (dlAbort.signal.aborted) break; failed++; }
+      }
+    }
+  }
   const aborted = dlAbort.signal.aborted; dlAbort = null;
   $('btnDlCancel').hidden = true; $('dlProgress').hidden = true; bar.style.width = '0';
   $('dlStatus').textContent = aborted ? '' : t('offline.done', { n: saved }) + (failed ? ` · ✕${failed}` : '');
@@ -757,9 +927,12 @@ $('setFlat').onchange = (e) => { settings.flat = Math.max(1, +e.target.value || 
 $('setUp').onchange = (e) => { settings.up = Math.max(50, +e.target.value || 300); saveSettings(); renderStats(); };
 $('setDown').onchange = (e) => { settings.down = Math.max(50, +e.target.value || 500); saveSettings(); renderStats(); };
 $('selProfile').onchange = (e) => { settings.profile = e.target.value; saveSettings(); };
+$('keyMapy').value = settings.keyMapy; $('keyTf').value = settings.keyTf;
+$('keyMapy').onchange = (e) => { settings.keyMapy = e.target.value.trim(); saveSettings(); renderBaseList(); if (baseKey === 'mapy') setBase('mapy'); };
+$('keyTf').onchange = (e) => { settings.keyTf = e.target.value.trim(); saveSettings(); renderBaseList(); if (SOURCES[baseKey].key === 'tf') setBase(baseKey); };
 $('setCacheViewed').onchange = (e) => { settings.cacheViewed = e.target.checked; saveSettings(); };
 $('selLang').onchange = (e) => { LANG = e.target.value; settings.lang = LANG; saveSettings(); applyI18n(); };
-$('btnLayers').onclick = () => showPanel('panelLayers');
+$('btnLayers').onclick = () => { renderBaseList(); showPanel('panelLayers'); };
 $('btnOffline').onclick = () => showPanel('panelOffline');
 $('btnRoutes').onclick = () => showPanel('panelRoutes');
 $('btnSettings').onclick = () => showPanel('panelSettings');
@@ -782,4 +955,6 @@ if ('serviceWorker' in navigator && window.isSecureContext) {
 
 applyI18n();
 renderRoute(); renderStats(); drawProfile();
+trailsVec.setEnabled(settings.trailsVec); bikeVec.setEnabled(settings.bikeVec);
+window.szlakownik = { map, trailsVec, bikeVec, settings }; // console access for debugging
 })();

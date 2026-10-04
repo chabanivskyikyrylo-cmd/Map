@@ -83,16 +83,20 @@
 <section class="panel" id="panelLayers" hidden>
   <div class="panel-head"><h2 data-i18n="layers">Warstwy</h2><button class="ibtn panel-close" data-i18n-title="close" title="Zamknij"><svg class="i"><use href="#i-close"/></svg></button></div>
   <div class="panel-body">
-    <div class="group"><div class="group-title" data-i18n="layers.base">Mapa</div>
-      <label class="opt"><input type="radio" name="base" value="opentopo" id="baseOpentopo"><span data-i18n="layer.opentopo">OpenTopoMap (rzeźba)</span></label>
-      <label class="opt"><input type="radio" name="base" value="osm" id="baseOsm"><span data-i18n="layer.osm">OpenStreetMap</span></label>
+    <div class="group"><div class="group-title" data-i18n="layers.base">Mapa</div><div id="baseList"></div>
+      <p class="note" data-i18n="layers.keysNote">Mapy.cz i Thunderforest pojawią się tutaj po wpisaniu klucza API w ustawieniach.</p>
+    </div>
+    <div class="group"><div class="group-title" data-i18n="layers.trails">Szlaki</div>
+      <label class="opt"><input type="checkbox" id="ovTrailsVec"><span class="sw" style="background:repeating-linear-gradient(90deg,#d62b1f 0 6px,transparent 6px 10px)"></span><span><span data-i18n="layer.trailsVec">Szlaki PTTK z OSM (wszystkie, offline)</span><span class="hint" id="trailsVecStatus"></span></span></label>
+      <label class="opt"><input type="checkbox" id="ovBikeVec"><span class="sw" style="background:repeating-linear-gradient(90deg,#8a3fb0 0 6px,transparent 6px 10px)"></span><span data-i18n="layer.bikeVec">Trasy rowerowe z OSM (wszystkie, offline)</span></label>
+      <label class="opt"><input type="checkbox" id="ovHiking"><span class="sw" style="background:#c4321f"></span><span data-i18n="layer.hiking">Szlaki piesze (waymarkedtrails)</span></label>
+      <label class="opt"><input type="checkbox" id="ovCycling"><span class="sw" style="background:#2a6fa8"></span><span data-i18n="layer.cycling">Szlaki rowerowe (waymarkedtrails)</span></label>
     </div>
     <div class="group"><div class="group-title" data-i18n="layers.overlays">Nakładki</div>
-      <label class="opt"><input type="checkbox" id="ovHiking"><span class="sw" style="background:#c4321f"></span><span data-i18n="layer.hiking">Szlaki piesze (OSM)</span></label>
-      <label class="opt"><input type="checkbox" id="ovCycling"><span class="sw" style="background:#2a6fa8"></span><span data-i18n="layer.cycling">Szlaki rowerowe</span></label>
+      <label class="opt"><input type="checkbox" id="ovHillshade"><span class="sw" style="background:linear-gradient(90deg,#9a9a9a,#e8e8e8)"></span><span data-i18n="layer.hillshade">Cieniowanie rzeźby</span></label>
       <label class="opt"><input type="checkbox" id="ovKm"><span class="sw" style="background:#1d2a21"></span><span data-i18n="layer.km">Znaczniki kilometrów</span></label>
     </div>
-    <p class="note" data-i18n="layers.note">Szlaki pochodzą z OpenStreetMap (waymarkedtrails.org): kolory jak na znakach PTTK.</p>
+    <p class="note" data-i18n="layers.note">Szlaki z OSM rysowane są przerywaną linią w kolorze znaku; stuknij w szlak, aby zobaczyć nazwę. Widoczne od zoom 10, pobierają się dla oglądanego obszaru i zostają w pamięci.</p>
   </div>
 </section>
 
@@ -145,6 +149,10 @@
     </div>
     <div class="row"><label for="selProfile" data-i18n="settings.profile">Profil wyznaczania trasy</label><select id="selProfile"><option value="hiking-mountain">hiking-mountain</option><option value="hiking-beta">hiking-beta</option><option value="trekking">trekking (rower)</option><option value="shortest">shortest</option></select></div>
     <div class="row"><label class="opt" for="setCacheViewed"><input type="checkbox" id="setCacheViewed"><span data-i18n="settings.cacheViewed">Zapisuj przeglądane kafelki</span></label></div>
+    <div class="group"><div class="group-title" data-i18n="settings.keys">Klucze API (opcjonalnie)</div>
+      <div class="row"><label for="keyMapy">Mapy.cz<span class="hint" data-i18n="settings.keyMapy">Turystyczna mapa z PL/CZ/SK — klucz na developer.mapy.cz</span></label><input type="text" id="keyMapy" autocomplete="off" spellcheck="false" style="width:46%"></div>
+      <div class="row"><label for="keyTf">Thunderforest<span class="hint" data-i18n="settings.keyTf">Outdoors, Landscape — klucz na thunderforest.com</span></label><input type="text" id="keyTf" autocomplete="off" spellcheck="false" style="width:46%"></div>
+    </div>
     <div class="btnrow wrap"><button class="btn" id="btnRebuild"><svg class="i"><use href="#i-snap"/></svg><span data-i18n="rebuild">Przelicz po szlakach</span></button></div>
     <p class="note" data-i18n="settings.about">Mapa: OpenTopoMap, OpenStreetMap. Szlaki: waymarkedtrails.org. Trasowanie: brouter.de. Wysokości: open-meteo.com.</p>
   </div>
