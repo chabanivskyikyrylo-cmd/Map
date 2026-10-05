@@ -25,6 +25,7 @@ const I18N = {
     'gpx.imported': 'Zaimportowano: {name}', 'gpx.badfile': 'Nie udało się odczytać GPX',
     'sw.updated': 'Dostępna nowa wersja — odśwież stronę', 'unit.km': 'km', 'unit.m': 'm', 'unit.h': 'h', 'unit.min': 'min', 'route.untitled': 'Trasa', 'ele.failed': 'Nie udało się pobrać wysokości',
     'layers.trails': 'Szlaki', 'layer.trailsVec': 'Szlaki PTTK z OSM (wszystkie, offline)', 'layer.bikeVec': 'Trasy rowerowe z OSM (wszystkie, offline)', 'layer.hillshade': 'Cieniowanie rzeźby', 'layer.hiking': 'Szlaki piesze (waymarkedtrails)', 'layer.cycling': 'Szlaki rowerowe (waymarkedtrails)', 'layers.keysNote': 'Mapy.cz i Thunderforest pojawią się tutaj po wpisaniu klucza API w ustawieniach.', 'layers.note': 'Szlaki z OSM rysowane są przerywaną linią w kolorze znaku; stuknij w szlak, aby zobaczyć nazwę. Widoczne od zoom 10, pobierają się dla oglądanego obszaru i zostają w pamięci.', 'layer.voyager': 'czytelna', 'layer.opentopo': 'rzeźba, poziomice', 'layer.esritopo': 'topograficzna', 'layer.esrisat': 'satelita', 'layer.mapy': 'turystyczna PL/CZ/SK', 'layer.tfoutdoors': 'outdoor', 'layer.tflandscape': 'krajobraz', 'trails.cells': '{n} obszarów szlaków w pamięci', 'trails.failed': 'Nie udało się pobrać szlaków (Overpass)', 'trails.unnamed': 'Szlak bez nazwy', 'net.iwn': 'międzynarodowy', 'net.nwn': 'krajowy', 'net.rwn': 'regionalny', 'net.lwn': 'lokalny', 'net.icn': 'międzynarodowy', 'net.ncn': 'krajowy', 'net.rcn': 'regionalny', 'net.lcn': 'lokalny', 'offline.cells': '{n} obszarów szlaków', 'offline.cellsProgress': 'Szlaki: obszar {key}…', 'settings.keys': 'Klucze API (opcjonalnie)', 'settings.keyMapy': 'Turystyczna mapa PL/CZ/SK — klucz na developer.mapy.cz', 'settings.keyTf': 'Outdoors, Landscape — klucz na thunderforest.com',
+    'words.title': 'Trasa słowami', 'words.hint': 'Punkty oddziel myślnikiem, przecinkiem, strzałką lub nową linią. Można wpisać współrzędne (49.2323, 19.9812). Szukam w OpenStreetMap, blisko aktualnego widoku.', 'words.find': 'Znajdź', 'words.draw': 'Rysuj trasę', 'words.searching': 'Szukam: {q}…', 'words.notfound': 'Nie znaleziono: {q}', 'words.none': 'Wpisz co najmniej dwa punkty', 'words.offline': 'Wyszukiwanie wymaga sieci', 'words.routing': 'Wyznaczam trasę po szlakach…', 'words.check': 'Sprawdź dopasowania i rysuj trasę', 'type.peak': 'szczyt', 'type.saddle': 'przełęcz', 'type.hut': 'schronisko', 'type.shelter': 'schron', 'type.place': 'miejscowość', 'type.lake': 'jezioro', 'type.valley': 'dolina', 'type.cave': 'jaskinia', 'type.viewpoint': 'punkt widokowy', 'type.station': 'przystanek', 'type.parking': 'parking', 'type.spring': 'źródło', 'type.waterfall': 'wodospad',
   },
   ru: {
     'net.offline': 'Офлайн', draw: 'Рисовать', drawing: 'Рисую — тапни по карте', snap: 'По тропам', undo: 'Отменить', clear: 'Очистить', save: 'Сохранить',
@@ -45,6 +46,7 @@ const I18N = {
     'gpx.imported': 'Импортировано: {name}', 'gpx.badfile': 'Не удалось прочитать GPX',
     'sw.updated': 'Доступна новая версия — перезагрузи страницу', 'unit.km': 'км', 'unit.m': 'м', 'unit.h': 'ч', 'unit.min': 'мин', 'route.untitled': 'Маршрут', 'ele.failed': 'Не удалось загрузить высоты',
     'layers.trails': 'Szlaki', 'layer.trailsVec': 'Szlaki PTTK из OSM (все, офлайн)', 'layer.bikeVec': 'Веломаршруты из OSM (все, офлайн)', 'layer.hillshade': 'Тени рельефа', 'layer.hiking': 'Пешие szlaki (waymarkedtrails)', 'layer.cycling': 'Велосипедные (waymarkedtrails)', 'layers.keysNote': 'Mapy.cz и Thunderforest появятся здесь после ввода ключа API в настройках.', 'layers.note': 'Szlaki из OSM рисуются пунктиром цветом знака; тап по тропе показывает название. Видны с zoom 10, подгружаются для просматриваемой области и остаются в памяти.', 'layer.voyager': 'читаемая', 'layer.opentopo': 'рельеф, горизонтали', 'layer.esritopo': 'топографическая', 'layer.esrisat': 'спутник', 'layer.mapy': 'туристическая PL/CZ/SK', 'layer.tfoutdoors': 'outdoor', 'layer.tflandscape': 'ландшафт', 'trails.cells': '{n} областей szlaków в памяти', 'trails.failed': 'Не удалось загрузить szlaki (Overpass)', 'trails.unnamed': 'Szlak без названия', 'net.iwn': 'международный', 'net.nwn': 'национальный', 'net.rwn': 'региональный', 'net.lwn': 'локальный', 'net.icn': 'международный', 'net.ncn': 'национальный', 'net.rcn': 'региональный', 'net.lcn': 'локальный', 'offline.cells': '{n} областей szlaków', 'offline.cellsProgress': 'Szlaki: область {key}…', 'settings.keys': 'Ключи API (необязательно)', 'settings.keyMapy': 'Туристическая карта PL/CZ/SK — ключ на developer.mapy.cz', 'settings.keyTf': 'Outdoors, Landscape — ключ на thunderforest.com',
+    'words.title': 'Трасса словами', 'words.hint': 'Точки раздели тире, запятой, стрелкой или новой строкой. Можно координаты (49.2323, 19.9812). Ищу в OpenStreetMap рядом с текущим видом.', 'words.find': 'Найти', 'words.draw': 'Нарисовать', 'words.searching': 'Ищу: {q}…', 'words.notfound': 'Не найдено: {q}', 'words.none': 'Введи хотя бы две точки', 'words.offline': 'Для поиска нужна сеть', 'words.routing': 'Прокладываю по тропам…', 'words.check': 'Проверь совпадения и нарисуй маршрут', 'type.peak': 'вершина', 'type.saddle': 'перевал', 'type.hut': 'приют', 'type.shelter': 'укрытие', 'type.place': 'населённый пункт', 'type.lake': 'озеро', 'type.valley': 'долина', 'type.cave': 'пещера', 'type.viewpoint': 'смотровая', 'type.station': 'остановка', 'type.parking': 'парковка', 'type.spring': 'источник', 'type.waterfall': 'водопад',
   },
   uk: {
     'net.offline': 'Офлайн', draw: 'Малювати', drawing: 'Малюю — тапни по мапі', snap: 'Стежками', undo: 'Скасувати', clear: 'Очистити', save: 'Зберегти',
@@ -65,6 +67,7 @@ const I18N = {
     'gpx.imported': 'Імпортовано: {name}', 'gpx.badfile': 'Не вдалося прочитати GPX',
     'sw.updated': 'Доступна нова версія — перезавантаж сторінку', 'unit.km': 'км', 'unit.m': 'м', 'unit.h': 'год', 'unit.min': 'хв', 'route.untitled': 'Маршрут', 'ele.failed': 'Не вдалося завантажити висоти',
     'layers.trails': 'Szlaki', 'layer.trailsVec': 'Szlaki PTTK з OSM (усі, офлайн)', 'layer.bikeVec': 'Веломаршрути з OSM (усі, офлайн)', 'layer.hillshade': 'Тіні рельєфу', 'layer.hiking': 'Пішохідні szlaki (waymarkedtrails)', 'layer.cycling': 'Велосипедні (waymarkedtrails)', 'layers.keysNote': 'Mapy.cz і Thunderforest з’являться тут після введення ключа API в налаштуваннях.', 'layers.note': 'Szlaki з OSM малюються пунктиром кольором знака; тап по стежці показує назву. Видно з zoom 10, підвантажуються для області перегляду і залишаються в пам’яті.', 'layer.voyager': 'читабельна', 'layer.opentopo': 'рельєф, горизонталі', 'layer.esritopo': 'топографічна', 'layer.esrisat': 'супутник', 'layer.mapy': 'туристична PL/CZ/SK', 'layer.tfoutdoors': 'outdoor', 'layer.tflandscape': 'ландшафт', 'trails.cells': '{n} областей szlaków у пам’яті', 'trails.failed': 'Не вдалося завантажити szlaki (Overpass)', 'trails.unnamed': 'Szlak без назви', 'net.iwn': 'міжнародний', 'net.nwn': 'національний', 'net.rwn': 'регіональний', 'net.lwn': 'локальний', 'net.icn': 'міжнародний', 'net.ncn': 'національний', 'net.rcn': 'регіональний', 'net.lcn': 'локальний', 'offline.cells': '{n} областей szlaków', 'offline.cellsProgress': 'Szlaki: область {key}…', 'settings.keys': 'Ключі API (необов’язково)', 'settings.keyMapy': 'Туристична мапа PL/CZ/SK — ключ на developer.mapy.cz', 'settings.keyTf': 'Outdoors, Landscape — ключ на thunderforest.com',
+    'words.title': 'Траса словами', 'words.hint': 'Точки розділи тире, комою, стрілкою або новим рядком. Можна координати (49.2323, 19.9812). Шукаю в OpenStreetMap поруч із поточним видом.', 'words.find': 'Знайти', 'words.draw': 'Намалювати', 'words.searching': 'Шукаю: {q}…', 'words.notfound': 'Не знайдено: {q}', 'words.none': 'Введи щонайменше дві точки', 'words.offline': 'Для пошуку потрібна мережа', 'words.routing': 'Прокладаю стежками…', 'words.check': 'Перевір збіги і намалюй маршрут', 'type.peak': 'вершина', 'type.saddle': 'перевал', 'type.hut': 'притулок', 'type.shelter': 'укриття', 'type.place': 'населений пункт', 'type.lake': 'озеро', 'type.valley': 'долина', 'type.cave': 'печера', 'type.viewpoint': 'оглядовий', 'type.station': 'зупинка', 'type.parking': 'парковка', 'type.spring': 'джерело', 'type.waterfall': 'водоспад',
   },
   en: {
     'net.offline': 'Offline', draw: 'Draw', drawing: 'Drawing — tap the map', snap: 'Snap to trails', undo: 'Undo', clear: 'Clear', save: 'Save',
@@ -85,6 +88,7 @@ const I18N = {
     'gpx.imported': 'Imported: {name}', 'gpx.badfile': 'Could not read the GPX file',
     'sw.updated': 'New version available — reload the page', 'unit.km': 'km', 'unit.m': 'm', 'unit.h': 'h', 'unit.min': 'min', 'route.untitled': 'Route', 'ele.failed': 'Could not load elevation',
     'layers.trails': 'Trails', 'layer.trailsVec': 'PTTK trails from OSM (all, offline)', 'layer.bikeVec': 'Cycling routes from OSM (all, offline)', 'layer.hillshade': 'Hillshade', 'layer.hiking': 'Hiking trails (waymarkedtrails)', 'layer.cycling': 'Cycling routes (waymarkedtrails)', 'layers.keysNote': 'Mapy.cz and Thunderforest appear here once an API key is entered in settings.', 'layers.note': 'OSM trails are drawn as dashed lines in the blaze colour; tap a trail for its name. Visible from zoom 10, fetched for the area you look at and kept for offline use.', 'layer.voyager': 'readable', 'layer.opentopo': 'relief, contours', 'layer.esritopo': 'topographic', 'layer.esrisat': 'satellite', 'layer.mapy': 'hiking map PL/CZ/SK', 'layer.tfoutdoors': 'outdoor', 'layer.tflandscape': 'landscape', 'trails.cells': '{n} trail areas stored', 'trails.failed': 'Could not load trails (Overpass)', 'trails.unnamed': 'Unnamed trail', 'net.iwn': 'international', 'net.nwn': 'national', 'net.rwn': 'regional', 'net.lwn': 'local', 'net.icn': 'international', 'net.ncn': 'national', 'net.rcn': 'regional', 'net.lcn': 'local', 'offline.cells': '{n} trail areas', 'offline.cellsProgress': 'Trails: area {key}…', 'settings.keys': 'API keys (optional)', 'settings.keyMapy': 'Hiking map PL/CZ/SK — key from developer.mapy.cz', 'settings.keyTf': 'Outdoors, Landscape — key from thunderforest.com',
+    'words.title': 'Route from words', 'words.hint': 'Separate stops with a dash, comma, arrow or new line. Coordinates work too (49.2323, 19.9812). Searches OpenStreetMap near the current view.', 'words.find': 'Find', 'words.draw': 'Draw route', 'words.searching': 'Searching: {q}…', 'words.notfound': 'Not found: {q}', 'words.none': 'Enter at least two stops', 'words.offline': 'Search needs a network connection', 'words.routing': 'Routing along trails…', 'words.check': 'Check the matches and draw the route', 'type.peak': 'peak', 'type.saddle': 'pass', 'type.hut': 'hut', 'type.shelter': 'shelter', 'type.place': 'place', 'type.lake': 'lake', 'type.valley': 'valley', 'type.cave': 'cave', 'type.viewpoint': 'viewpoint', 'type.station': 'stop', 'type.parking': 'parking', 'type.spring': 'spring', 'type.waterfall': 'waterfall',
   },
 };
 
@@ -794,6 +798,95 @@ $('fileGpx').onchange = async (e) => {
   } catch (err) { toast(t('gpx.badfile')); }
 };
 
+
+/* ------------------------------------------------------------ route from words */
+// "Kuźnice – Hala Gąsienicowa – Zawrat – Morskie Oko": geocode each stop (Nominatim), let the user fix mismatches, then route through them.
+const TYPE_KEYS = { peak: 'type.peak', saddle: 'type.saddle', alpine_hut: 'type.hut', wilderness_hut: 'type.hut', shelter: 'type.shelter', hut: 'type.hut', village: 'type.place', hamlet: 'type.place', town: 'type.place', city: 'type.place', suburb: 'type.place', neighbourhood: 'type.place', locality: 'type.place', water: 'type.lake', lake: 'type.lake', valley: 'type.valley', cave_entrance: 'type.cave', viewpoint: 'type.viewpoint', station: 'type.station', halt: 'type.station', bus_stop: 'type.station', parking: 'type.parking', spring: 'type.spring', waterfall: 'type.waterfall' };
+let wordStops = []; // [{ q, lat?, lon?, options: [{lat, lon, label}], pick }]
+function splitStops(text) {
+  const protectedText = text.replace(/(-?\d{1,2}\.\d+)\s*,\s*(-?\d{1,3}\.\d+)/g, '$1 $2'); // keep "49.23, 19.98" together
+  return protectedText.split(/\s*(?:\n|→|->|=>|>|—|–|\s-\s|,|;)\s*/).map((x) => x.trim()).filter(Boolean);
+}
+function parseCoord(q) { const m = q.match(/^(-?\d{1,2}(?:[.,]\d+)?)\s*[ ,;]\s*(-?\d{1,3}(?:[.,]\d+)?)$/); if (!m) return null; const lat = parseFloat(m[1].replace(',', '.')), lon = parseFloat(m[2].replace(',', '.')); return Math.abs(lat) <= 90 && Math.abs(lon) <= 180 ? [lat, lon] : null; }
+function shortLabel(r) {
+  const parts = (r.display_name || '').split(',').map((x) => x.trim());
+  const name = r.name || parts[0] || '?';
+  const tk = TYPE_KEYS[r.type] || (r.category === 'natural' ? 'type.' + r.type : null);
+  const kind = tk && t(tk) !== tk ? t(tk) : (r.type || '').replace(/_/g, ' ');
+  const where = parts.slice(1, 3).filter((x) => x && x !== name).join(', ');
+  return [name, kind, where].filter(Boolean).join(' · ');
+}
+async function geocode(q, anchor) {
+  const b = map.getBounds();
+  const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=6&dedupe=1&accept-language=${encodeURIComponent(LANG)}&q=${encodeURIComponent(q)}&viewbox=${b.getWest().toFixed(4)},${b.getNorth().toFixed(4)},${b.getEast().toFixed(4)},${b.getSouth().toFixed(4)}&bounded=0`;
+  const resp = await fetch(url, { headers: { Accept: 'application/json' } });
+  if (!resp.ok) throw new Error('nominatim ' + resp.status);
+  const rows = await resp.json();
+  const opts = rows.map((r) => ({ lat: +r.lat, lon: +r.lon, label: shortLabel(r), d: haversine(anchor, [+r.lat, +r.lon]) }));
+  opts.sort((a, b2) => a.d - b2.d); // nearest to the previous stop (or the map centre) first
+  return opts;
+}
+function renderStops() {
+  const box = $('wordsStops'); box.innerHTML = '';
+  wordStops.forEach((st, i) => {
+    const row = document.createElement('div'); row.className = 'stop' + (st.options.length ? '' : ' missing');
+    const n = document.createElement('span'); n.className = 'n'; n.textContent = String(i + 1);
+    const sel = document.createElement('select');
+    if (!st.options.length) { const o = document.createElement('option'); o.textContent = t('words.notfound', { q: st.q }); sel.appendChild(o); sel.disabled = true; }
+    st.options.forEach((o, k) => { const op = document.createElement('option'); op.value = String(k); op.textContent = (o.d < 1e6 ? `${(o.d / 1000).toFixed(1)} km · ` : '') + o.label; op.selected = k === st.pick; sel.appendChild(op); });
+    sel.onchange = () => { st.pick = +sel.value; };
+    row.append(n, sel); box.appendChild(row);
+  });
+  $('wordsDraw').hidden = !wordStops.some((st) => st.options.length) || wordStops.filter((st) => st.options.length).length < 2;
+}
+let wordsBusy = false;
+async function findStops() {
+  if (wordsBusy) return;
+  const stops = splitStops($('wordsText').value);
+  if (stops.length < 2) { $('wordsStatus').textContent = t('words.none'); return; }
+  if (!navigator.onLine) { $('wordsStatus').textContent = t('words.offline'); return; }
+  wordsBusy = true; $('wordsFind').disabled = true; wordStops = []; renderStops();
+  const c = map.getCenter(); let anchor = [c.lat, c.lng];
+  try {
+    for (let i = 0; i < stops.length; i++) {
+      const q = stops[i];
+      $('wordsStatus').textContent = t('words.searching', { q });
+      const coord = parseCoord(q);
+      let options = [];
+      if (coord) options = [{ lat: coord[0], lon: coord[1], label: q, d: haversine(anchor, coord) }];
+      else {
+        try { options = await geocode(q, anchor); } catch (e) { options = []; }
+        if (i < stops.length - 1) await new Promise((r) => setTimeout(r, 1100)); // Nominatim: at most one request per second
+      }
+      wordStops.push({ q, options, pick: 0 });
+      if (options.length) anchor = [options[0].lat, options[0].lon];
+      renderStops();
+    }
+    const missing = wordStops.filter((st) => !st.options.length).map((st) => st.q);
+    $('wordsStatus').textContent = missing.length ? t('words.notfound', { q: missing.join(', ') }) : t('words.check');
+  } finally { wordsBusy = false; $('wordsFind').disabled = false; }
+}
+async function drawFromStops() {
+  const pts = wordStops.filter((st) => st.options.length).map((st) => { const o = st.options[st.pick]; return [o.lat, o.lon]; });
+  if (pts.length < 2) return;
+  $('modalWords').hidden = true;
+  setDrawing(false);
+  if (route.waypoints.length || route.legs.length) snapshot();
+  route = newRoute(); legToken++;
+  route.name = wordStops.filter((st) => st.options.length).map((st) => st.q).join(' – ');
+  route.waypoints = pts;
+  renderRoute(); afterRouteChange(); renderRouteList();
+  map.fitBounds(L.latLngBounds(pts), { padding: [40, 40] });
+  toast(t('words.routing'), 2000);
+  for (let i = 0; i < pts.length - 1; i++) { if (route.waypoints !== pts) return; await computeLeg(i); }
+  const tr = track(); if (tr.length > 1) map.fitBounds(L.latLngBounds(tr.map((p) => [p[0], p[1]])), { padding: [40, 40] });
+}
+$('btnWords').onclick = () => { $('modalWords').hidden = false; $('wordsStatus').textContent = ''; setTimeout(() => $('wordsText').focus(), 50); };
+$('wordsCancel').onclick = () => { $('modalWords').hidden = true; };
+$('wordsFind').onclick = findStops;
+$('wordsDraw').onclick = drawFromStops;
+$('wordsText').addEventListener('keydown', (e) => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) findStops(); });
+
 /* --------------------------------------------------------------------- GPS */
 let gpsWatch = null, gpsFollow = false, gpsMarker = null, gpsCircle = null, gpsHadFix = false;
 function stopGps() { if (gpsWatch != null) navigator.geolocation.clearWatch(gpsWatch); gpsWatch = null; gpsFollow = false; gpsHadFix = false; if (gpsMarker) map.removeLayer(gpsMarker); if (gpsCircle) map.removeLayer(gpsCircle); gpsMarker = gpsCircle = null; $('btnLocate').className = 'ibtn'; }
@@ -936,7 +1029,7 @@ $('btnLayers').onclick = () => { renderBaseList(); showPanel('panelLayers'); };
 $('btnOffline').onclick = () => showPanel('panelOffline');
 $('btnRoutes').onclick = () => showPanel('panelRoutes');
 $('btnSettings').onclick = () => showPanel('panelSettings');
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closePanel(); $('modalSave').hidden = true; } });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closePanel(); $('modalSave').hidden = true; $('modalWords').hidden = true; } });
 
 /* ------------------------------------------------------------------ network */
 function netState() { $('netpill').hidden = navigator.onLine; }

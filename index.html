@@ -36,14 +36,16 @@
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
   <symbol id="i-open" viewBox="0 0 24 24"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.8-4.8"/></symbol>
   <symbol id="i-offline" viewBox="0 0 24 24"><path d="M4 16a4 4 0 0 1 1-7.9A6 6 0 0 1 16.6 7 4.5 4.5 0 0 1 18 16"/><path d="M12 11v9m0 0-3-3m3 3 3-3"/></symbol>
 </svg>
 
 <div id="map" aria-label="Mapa"></div>
 
 <header class="topbar">
-  <div class="brand"><span class="blaze" aria-hidden="true"></span><span>Szlakownik</span><span id="netpill" class="pill" hidden data-i18n="net.offline">Offline</span></div>
+  <div class="brand"><span class="blaze" aria-hidden="true"></span><span class="brand-name">Szlakownik</span><span id="netpill" class="pill" hidden data-i18n="net.offline">Offline</span></div>
   <div class="btnrow">
+    <button class="ibtn" id="btnWords" data-i18n-title="words.title" title="Trasa słowami"><svg class="i"><use href="#i-search"/></svg></button>
     <button class="ibtn" id="btnLayers" data-i18n-title="layers" title="Warstwy"><svg class="i"><use href="#i-layers"/></svg></button>
     <button class="ibtn" id="btnOffline" data-i18n-title="offline" title="Mapa offline"><svg class="i"><use href="#i-offline"/></svg></button>
     <button class="ibtn" id="btnLocate" data-i18n-title="gps" title="GPS"><svg class="i"><use href="#i-gps"/></svg></button>
@@ -166,6 +168,17 @@
   </div>
 </div>
 
+
+<div class="modal" id="modalWords" hidden>
+  <div class="modal-card">
+    <h3 data-i18n="words.title">Trasa słowami</h3>
+    <textarea id="wordsText" rows="3" spellcheck="false" placeholder="Kuźnice – Hala Gąsienicowa – Zawrat – Morskie Oko"></textarea>
+    <p class="note" data-i18n="words.hint">Punkty oddziel myślnikiem, przecinkiem, strzałką lub nową linią. Można wpisać współrzędne (49.2323, 19.9812). Szukam w OpenStreetMap, blisko aktualnego widoku.</p>
+    <div class="stops" id="wordsStops"></div>
+    <div class="note" id="wordsStatus"></div>
+    <div class="modal-acts"><button class="btn" id="wordsCancel" data-i18n="cancel">Anuluj</button><button class="btn primary" id="wordsFind" data-i18n="words.find">Znajdź</button><button class="btn primary" id="wordsDraw" hidden data-i18n="words.draw">Rysuj trasę</button></div>
+  </div>
+</div>
 
 <div class="toasts" id="toasts" aria-live="polite"></div>
 <!-- APP:END -->
