@@ -185,9 +185,12 @@ input[type="number"] { width: 84px; text-align: right; font-variant-numeric: tab
 .modal-card textarea { width: 100%; height: 180px; resize: vertical; font: 12px/1.4 ui-monospace, Menlo, Consolas, monospace; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-2); color: var(--fg); padding: 8px; }
 .modal-card textarea#wordsText { height: 84px; font: 15px/1.4 var(--font-ui); }
 .stops { display: flex; flex-direction: column; gap: 6px; max-height: 40vh; overflow-y: auto; }
-.stop { display: grid; grid-template-columns: 22px 1fr 36px; gap: 6px; align-items: center; }
-.stop-del { width: 36px; height: 36px; border: 0; border-radius: 10px; background: transparent; color: var(--muted); display: inline-flex; align-items: center; justify-content: center; padding: 0; }
-.stop-del:hover { background: var(--surface-2); color: var(--accent); }
+.stop { display: grid; grid-template-columns: 18px 1fr 30px 30px 30px; gap: 4px; align-items: center; }
+.stop-btn { width: 30px; height: 34px; border: 0; border-radius: 8px; background: transparent; color: var(--muted); display: inline-flex; align-items: center; justify-content: center; padding: 0; }
+.stop-btn .i { width: 18px; height: 18px; }
+.stop-btn:hover { background: var(--surface-2); color: var(--fg); }
+.stop-btn.del:hover { color: var(--accent); }
+.stop-btn:disabled { opacity: .3; cursor: default; }
 .stop .n { font-family: var(--font-num); font-weight: 600; color: var(--muted); text-align: right; }
 .stop select { width: 100%; }
 .stop.missing select { border-color: var(--accent); color: var(--accent); }
