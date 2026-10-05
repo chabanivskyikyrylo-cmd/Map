@@ -1,6 +1,6 @@
 /* Szlakownik service worker: caches the app shell so the page opens offline.
    Map tiles are cached by the page itself (Cache Storage, see app.js), not here. */
-const VERSION = 'szlakownik-shell-v3';
+const VERSION = 'szlakownik-shell-v4';
 const SHELL = ['./', './index.html', './app.css', './app.js', './vendor/leaflet.js', './vendor/leaflet.css', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png'];
 const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 
